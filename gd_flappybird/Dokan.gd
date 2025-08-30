@@ -1,15 +1,14 @@
 extends StaticBody2D
 
-class_name Dokan
-
+# 移動速度
 var velocity = Vector2(-150, 0)
 
-# 開始処理
-func start(pos, speed_rate):
+func start(pos:Vector2, speed_rate:float) -> void:
 	position = pos
 	velocity *= speed_rate
 
-func _process(delta):
+func _process(delta:float) -> void:
+	# 位置に速度を足し込む
 	position += velocity * delta
 	if position.x < -128:
 		# 画面外に出たら消える

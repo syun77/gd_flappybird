@@ -11,15 +11,12 @@ config_version=5
 [application]
 
 config/name="FlappyBird"
-run/main_scene="res://Main.tscn"
-config/features=PackedStringArray("4.1")
-config/icon="res://icon.png"
+run/main_scene="uid://b7100ogp7jxvl"
+config/features=PackedStringArray("4.4", "Forward Plus")
+config/icon="res://icon.svg"
 
 [display]
 
 window/size/viewport_width=800
 window/size/viewport_height=480
-
-[rendering]
-
-environment/defaults/default_environment="res://default_env.tres"
+window/size/always_on_top=true

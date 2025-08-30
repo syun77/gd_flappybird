@@ -1,7 +1,7 @@
 extends Node2D
 
 # 土管オブジェクト
-var DOKAN_OBJ = preload("res://Dokan.tscn")
+var Dokan = preload("res://Dokan.tscn")
 
 # 出現間隔(最初は3秒)
 var interval = 3
@@ -22,7 +22,7 @@ func _ready():
 	# 乱数を初期化
 	randomize()
 	
-	# キャプションは初期状態では非表示にしておく
+	# キャプションは初期状態では非表示.
 	caption.visible = false
 
 func _process(delta):
@@ -31,18 +31,17 @@ func _process(delta):
 		# インターバルを超えたら土管を出現させる
 		timer -= interval
 		_add_dokan()
-		
+	
 	if is_instance_valid(player) == false:
-		# プレイヤーが消滅した
-		# キャプションを更新
+		# プレイヤーが消滅したのでキャプションを更新.
 		caption.visible = true
 		caption.text = "GAME OVER\n\n RETRY: DOWN KEY"
 		
-		# 下キーが押されたらリトライ
+		# 下キーが押されたらリトライ.
 		if Input.is_action_just_pressed("ui_down"):
-			# Mainシーンを読み込み直してリトライする
+			# Mainシーンを読み込んでリトライする.
 			get_tree().change_scene_to_file("res://Main.tscn")
-
+			
 func _add_dokan():
 	# 出現回数をカウントアップ
 	dokan_cnt += 1
@@ -53,7 +52,7 @@ func _add_dokan():
 	
 	# 土管を上下に生成
 	for i in range(2):
-		var dokan = DOKAN_OBJ.instantiate()
+		var dokan = Dokan.instantiate()
 		var py = ybase
 		if i == 0:
 			# 上のドカン
