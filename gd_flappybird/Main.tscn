@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://b7100ogp7jxvl"]
 
-[ext_resource type="Texture2D" uid="uid://5by5v4y6guia" path="res://assets/bg_back.png" id="1_glv2v"]
+[ext_resource type="Texture2D" uid="uid://ddx35flxbu6rc" path="res://assets/bg_back.png" id="1_glv2v"]
 [ext_resource type="Script" uid="uid://bu2s7rjn6b0lf" path="res://Main.gd" id="1_r0du0"]
 [ext_resource type="PackedScene" uid="uid://dar4en5m1jrkh" path="res://Player.tscn" id="3_r0du0"]
-[ext_resource type="FontFile" uid="uid://cxjxnqy27ju2y" path="res://assets/Xolonium-Regular.ttf" id="4_cm0pq"]
+[ext_resource type="FontFile" uid="uid://bvhtf64dqglkp" path="res://assets/Xolonium-Regular.ttf" id="4_cm0pq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fos0i"]
 font = ExtResource("4_cm0pq")
